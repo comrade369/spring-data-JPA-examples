@@ -18,7 +18,7 @@ public class CourseMaterial {
     private String url;
 
     // UNI DIRECTIONAL MAPPING
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "course_id", referencedColumnName = "courseId")
     private Course course;
 }

@@ -8,8 +8,6 @@ import vignesh.springdataJPAexamples.entity.CourseMaterial;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class CourseMaterialRepositoryTest {
 

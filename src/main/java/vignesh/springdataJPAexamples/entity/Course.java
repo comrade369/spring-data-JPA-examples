@@ -26,6 +26,10 @@ public class Course {
     private Integer credit;
 
     // BI DIRECTIONAL MAPPING
-    @OneToOne(mappedBy = "course")
+    @OneToOne(mappedBy = "course", optional = false)
     private CourseMaterial courseMaterial;
+
+    @ManyToOne(cascade = CascadeType.ALL, optional = false)
+    @JoinColumn(name = "teacher_id", referencedColumnName = "teacherId")
+    private Teacher teacher;
 }
